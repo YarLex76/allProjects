@@ -23,6 +23,11 @@ public class PersonDAO {
         return people.stream().filter(person ->person.getId() == id).findAny().orElse(null);
     }
 
+    public void save (Person person){
+        person.setId(++PIOPLE_COUNT);
+        people.add(person);
+    }
+
 
 
 }
